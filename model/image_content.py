@@ -3,8 +3,7 @@ import json
 from model.content import Content
 from model.position import Position
 
-
-class ImageContent():
+class ImageContent:
     def __init__(self, image, content):
         self.image = image
         self.content = []
@@ -17,5 +16,4 @@ class ImageContent():
 
     @classmethod
     def fromJson(cls, json_string):
-        json_dict = json.loads(json_string)
-        return cls(**json_dict)
+        return cls(**json_string)
